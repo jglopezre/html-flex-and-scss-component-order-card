@@ -117,6 +117,11 @@ footer .attribution a {
 }
 .card section:nth-child(3) div:nth-child(3) > a {
   color: #3829e0;
+  transition: color 0.3s;
+}
+.card section:nth-child(3) div:nth-child(3) > a:hover {
+  color: #7280a7;
+  transition: color 0.3s;
 }
 .card section:nth-child(4) {
   display: flex;
@@ -136,10 +141,26 @@ footer .attribution a {
   background-color: #3829e0;
   color: white;
   box-shadow: 0 20px 15px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+.card section:nth-child(4) button:nth-child(1):hover {
+  background-color: #7280a7;
+  transition: background-color 0.3s;
+}
+.card section:nth-child(4) button:nth-child(1):active {
+  background-color: black;
 }
 .card section:nth-child(4) button:nth-child(2) {
   background-color: rgba(0, 0, 0, 0);
   color: #7280a7;
+  transition: color 0.3s;
+}
+.card section:nth-child(4) button:nth-child(2):hover {
+  color: #1f2f56;
+  transition: color 0.3s;
+}
+.card section:nth-child(4) button:nth-child(2):active {
+  border: solid 1px black;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,6 +10,8 @@ $card-width: 30%;
 $card-height: 680px;
 $b-radius: 20px;
 $b-content-radius: 10px;
+//timing
+$transition-delay: 0.3s;
 
 html {
     font-family: 'Red Hat Display', sans-serif;
@@ -137,7 +139,12 @@ footer {
 	    font-size: 0.8em;
 	    font-weight: 700;
 	    > a {
-		color: $primary-color-2;		
+		color: $primary-color-2;
+		transition: color $transition-delay;
+		&:hover {
+		    color: $neutral-color-2;
+		    transition: color $transition-delay;
+		}
 	    }
 
 	}
@@ -165,10 +172,28 @@ footer {
 	    background-color: $primary-color-2;
 	    color: white;
 	    box-shadow: 0 20px 15px $shadow;
+	    transition: background-color $transition-delay;
+	    &:hover {
+		background-color: $neutral-color-2;
+		transition: background-color $transition-delay;
+	    }
+	    &:active {
+		background-color: black;
+	    }
 	}
 	button:nth-child(2) {
 	    background-color: rgba(0, 0, 0, 0);
 	    color: $neutral-color-2;
+	    transition: color $transition-delay;
+	    &:hover {
+		color: $neutral-color-3;
+		transition: color $transition-delay;
+	    }
+	    &:active {
+		border: solid 1px black;
+	    }
 	}
     }
 }
+
+//mobile view
