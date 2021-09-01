@@ -33,6 +33,7 @@ body {
 
 main {
     height: 100%;
+    min-width: 375px;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -57,7 +58,6 @@ footer {
 .card {
     width: 80%;
     max-width: $card-width;
-//    height: $card-height;
     background-color: white;
     border-radius: $b-radius;
     display: flex;
@@ -81,12 +81,6 @@ footer {
 	align-items: center;
 	text-align: center;
 	width: $content-width;
-	padding: {
-	    top: 0;
-	    bottom: 0;
-//	    left: 3.5em;
-//	    right: 3.5em;
-	}
 	> h1 {
 	    color: $neutral-color-3;
 	    font-weight: 900;
@@ -94,7 +88,6 @@ footer {
 	> p {
 	    color: $neutral-color-2;
 	    margin-top: -0.5em;
-//	    font-size: 0.9em;
 	    line-height: 1.6em;
 	}
     }
@@ -154,7 +147,6 @@ footer {
 		    transition: color $transition-delay;
 		}
 	    }
-
 	}
     }
 
@@ -204,8 +196,6 @@ footer {
     main {
 	background-image: url('images/pattern-background-mobile.svg');
 	background-position: 50% 0%;
-	background-attachment: fixed;
 	background-size: contain;
-	
     }
 }
