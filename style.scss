@@ -6,10 +6,13 @@ $neutral-color-2: hsl(224, 23%, 55%);
 $neutral-color-3: hsl(223, 47%, 23%);
 $shadow: rgba(0, 0, 0, 0.1);
 //Sizing
-$card-width: 30%;
+$card-width: 460px;
 $card-height: 680px;
+$mobile-card-width: 320px;
+$mobile-card-height: 550px;
 $b-radius: 20px;
 $b-content-radius: 10px;
+$content-width: 80%;
 //timing
 $transition-delay: 0.3s;
 
@@ -17,6 +20,7 @@ html {
     font-family: 'Red Hat Display', sans-serif;
     font-height: 500;
     font-size: 16px;
+    min-height: 700px;
     height: 100vh;
 }
 
@@ -28,16 +32,16 @@ body {
 }
 
 main {
-	height: 100%;
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	background-image: url('images/pattern-background-desktop.svg');
-	background-repeat: no-repeat;
-	background-position: 50% 0%;
-	background-color: $primary-color-1;
-    }
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    background-color: $primary-color-1;
+}
 
 footer {
     .attribution {
@@ -51,18 +55,22 @@ footer {
 
 
 .card {
-    width: $card-width;
-    height: $card-height;
+    width: 80%;
+    max-width: $card-width;
+//    height: $card-height;
     background-color: white;
     border-radius: $b-radius;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     box-shadow: 0 20px 30px $shadow;
+    
     > .image-container {
+	width: 100%;
 	border-radius: $b-radius $b-radius 0 0;
 	> img {
-	    width: 100%;
+	    width: inherit;
 	    border-radius: inherit;
 	}
     }
@@ -72,11 +80,12 @@ footer {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	width: $content-width;
 	padding: {
 	    top: 0;
 	    bottom: 0;
-	    left: 3.5em;
-	    right: 3.5em;
+//	    left: 3.5em;
+//	    right: 3.5em;
 	}
 	> h1 {
 	    color: $neutral-color-3;
@@ -97,17 +106,16 @@ footer {
 	background-color: $neutral-color-1;
 	border-radius: $b-content-radius;
 	justify-content: space-between;
+	width: $content-width;
 	margin: {
-	    left: 3em;
 	    top: 1em;
-	    right: 3em;
 	    bottom: 1em;
 	}
 	> div {
 	    display: flex;
 	}
 	div:nth-child(1) {
-	    width: 25%;
+	    width: 30%;
 	    justify-content: center;
 	    align-items: center;
 	    >img {
@@ -115,7 +123,7 @@ footer {
 	    }
 	}
 	div:nth-child(2) {
-	    width: 50%;
+	    width: 40%;
 	    flex-direction: column;
 	    line-height: 0.1em;
 	    justify-content: center;
@@ -133,7 +141,7 @@ footer {
 	    }
 	}
 	div:nth-child(3) {
-	    width: 25%;
+	    width: 30%;
 	    justify-content: center;
 	    align-items: center;
 	    font-size: 0.8em;
@@ -153,18 +161,13 @@ footer {
     section:nth-child(4) {
 	display: flex;
 	flex-direction: column;
-	
-	margin: {
-	    left: 3em;
-	    right: 3em;
-	    bottom: 2em;
-	}
+	width: $content-width;
+	margin-bottom: 1em;
 	> button {
 	    height: 4em;
 	    border: none;
 	    border-radius: $b-content-radius;
 	    font-weight: 700;
-	  //  font-size: 0.8em;
 	    margin-top: 1em;
 	}
 
@@ -197,3 +200,12 @@ footer {
 }
 
 //mobile view
+@media only screen and (max-width: 600px) {
+    main {
+	background-image: url('images/pattern-background-mobile.svg');
+	background-position: 50% 0%;
+	background-attachment: fixed;
+	background-size: contain;
+	
+    }
+}
