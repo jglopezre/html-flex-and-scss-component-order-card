@@ -15,6 +15,7 @@ body {
 
 main {
   height: 100%;
+  min-width: 375px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
@@ -58,8 +59,6 @@ footer .attribution a {
   align-items: center;
   text-align: center;
   width: 80%;
-  padding-top: 0;
-  padding-bottom: 0;
 }
 .card section:nth-child(2) > h1 {
   color: #1f2f56;
@@ -167,7 +166,6 @@ footer .attribution a {
   main {
     background-image: url("images/pattern-background-mobile.svg");
     background-position: 50% 0%;
-    background-attachment: fixed;
     background-size: contain;
   }
 }
