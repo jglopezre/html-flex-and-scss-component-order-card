@@ -58,7 +58,7 @@ footer .attribution a {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 80%;
+  width: 75%;
 }
 .card section:nth-child(2) > h1 {
   color: #1f2f56;
@@ -132,6 +132,8 @@ footer .attribution a {
 .card section:nth-child(4) > button {
   height: 4em;
   border: none;
+  cursor: pointer;
+  font-family: "Red Hat Display";
   border-radius: 10px;
   font-weight: 700;
   margin-top: 1em;
