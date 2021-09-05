@@ -5,14 +5,16 @@ $neutral-color-1: hsl(225, 100%, 98%);
 $neutral-color-2: hsl(224, 23%, 55%);
 $neutral-color-3: hsl(223, 47%, 23%);
 $shadow: rgba(0, 0, 0, 0.2);
+
 //Sizing
-$card-width: 460px;
+$card-width: 420px;
 $card-height: 680px;
 $mobile-card-width: 320px;
 $mobile-card-height: 550px;
 $b-radius: 20px;
 $b-content-radius: 10px;
 $content-width: 80%;
+
 //timing
 $transition-delay: 0.3s;
 
@@ -54,7 +56,6 @@ footer {
     }
 }
 
-
 .card {
     width: 80%;
     max-width: $card-width;
@@ -95,7 +96,7 @@ footer {
     section:nth-child(3) {
 	display: flex;
 	flex-direction: row;
-	height: 6em;
+	height: 5.5em;
 	background-color: $neutral-color-1;
 	border-radius: $b-content-radius;
 	justify-content: space-between;
@@ -106,6 +107,7 @@ footer {
 	}
 	> div {
 	    display: flex;
+	    line-height: 1.6em;
 	}
 	div:nth-child(1) {
 	    width: 30%;
@@ -116,23 +118,24 @@ footer {
 	    }
 	}
 	div:nth-child(2) {
+	    
 	    width: 40%;
 	    flex-direction: column;
-	    line-height: 0.1em;
 	    justify-content: center;
-	    > div {
+	    > span {
 		width: 100%;
-		margin-top: -0.8em;
-
-		> h4 {
-		    color: $neutral-color-3;
-		    font-weight: 700;
-		}
-		> p {
-		    color: $neutral-color-2;
-		}
+	    }
+	    span:nth-child(1) {
+		color: $neutral-color-3;
+		font-size: 1em;
+		font-weight: 700;
+	    }
+	    span:nth-child(2) {
+		color: $neutral-color-2;
+		font-size: 0.9em;
 	    }
 	}
+
 	div:nth-child(3) {
 	    width: 30%;
 	    justify-content: center;
@@ -164,11 +167,14 @@ footer {
 	    border-radius: $b-content-radius;
 	    font-size: 0.8em;
 	    font-weight: 700;
-	    margin-top: 1em;
+	    display: table;
+	    margin: {
+		top: 0.5em;
+		bottom: 1em;
+	    }
 	}
 
 	div:nth-child(1) {
-	    
 	    background-color: $primary-color-2;
 	    box-shadow: 0 20px 15px $shadow;
 	    transition: background-color $transition-delay;
@@ -182,8 +188,11 @@ footer {
 	    > a {
 		color: white;
 		text-decoration: none;
+		display: table-cell;
+		vertical-align: middle;
 	    }
 	}
+
 	div:nth-child(2) {
 	    background-color: rgba(0, 0, 0, 0);
 	    color: $neutral-color-2;
@@ -192,22 +201,25 @@ footer {
 		color: $neutral-color-3;
 		transition: color $transition-delay;
 	    }
-	    &:active {
-		border: solid 1px black;
-	    }
 	    > a {
 		color: $neutral-color-2;
 		text-decoration: none;
 		transition: color $transition-delay;
+		display: table-cell;
+		vertical-align: middle;
 		&:hover {
 		    color: $primary-color-2;
+		    transition: color $transition-delay;
+  
+		}
+		&:active {
+		    color: darkred;
 		    transition: color $transition-delay;
 		}
 	    }
 	}
     }
 }
-
 //mobile view
 @media only screen and (max-width: 600px) {
     main {
